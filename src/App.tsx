@@ -3,7 +3,8 @@ import { useState } from "react";
 import SelectBox from "./components/SelectBox";
 import BasicBox01 from "./components/BasicBox01";
 import BasicBox02 from "./components/BasicBox02";
-import ControlBox01 from "./components/ControllBox";
+import ControlBox01 from "./components/ControlBox01";
+import ControlBox02 from "./components/ControlBox02";
 
 function App() {
   const pullDownOptions = [1, 2, 3, 4, 5];
@@ -23,6 +24,7 @@ function App() {
         {selectedOption === 1 && <BasicBox01 />}
         {selectedOption === 2 && <BasicBox02 />}
         {selectedOption === 3 && <ControlBox01 />}
+        {selectedOption === 4 && <ControlBox02 />}
       </Canvas>
     </div>
   );
