@@ -1,8 +1,8 @@
 import { OrbitControls, Box } from "@react-three/drei";
-import { folder, useControls } from "leva";
+import { folder, useControls, button } from "leva";
 
 const ControlBox02 = () => {
-  const [{ scale, positionX, positionY, positionZ, color, wireframe }] =
+  const [{ scale, positionX, positionY, positionZ, color, wireframe }, reset] =
     useControls("Box", () => ({
       geometry: folder({
         scale: {
@@ -33,6 +33,16 @@ const ControlBox02 = () => {
       material: folder({
         color: "blue",
         wireframe: false,
+      }),
+      reset: button(() => {
+        reset({
+          scale: 1,
+          positionX: 0,
+          positionY: 0,
+          positionZ: 0,
+          color: "blue",
+          wireframe: false,
+        });
       }),
     }));
   return (
