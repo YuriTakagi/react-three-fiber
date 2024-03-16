@@ -5,9 +5,10 @@ import BasicBox01 from "./components/BasicBox01";
 import BasicBox02 from "./components/BasicBox02";
 import ControlBox01 from "./components/ControlBox01";
 import ControlBox02 from "./components/ControlBox02";
+import GeoBox01 from "./components/GeoBox01";
 
 function App() {
-  const pullDownOptions = [1, 2, 3, 4, 5];
+  const pullDownOptions = Array.from({ length: 10 }, (_, index) => 1 + index);
   const [selectedOption, setSelectedOption] = useState(pullDownOptions[0]);
 
   return (
@@ -25,6 +26,7 @@ function App() {
         {selectedOption === 2 && <BasicBox02 />}
         {selectedOption === 3 && <ControlBox01 />}
         {selectedOption === 4 && <ControlBox02 />}
+        {selectedOption === 5 && <GeoBox01 />}
       </Canvas>
     </div>
   );
