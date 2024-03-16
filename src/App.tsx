@@ -7,6 +7,7 @@ import ControlBox01 from "./components/ControlBox01";
 import ControlBox02 from "./components/ControlBox02";
 import GeoBox01 from "./components/GeoBox01";
 import GeoText01 from "./components/GeoText01";
+import GeoText02 from "./components/GeoText02";
 
 function App() {
   const pullDownOptions = Array.from({ length: 10 }, (_, index) => 1 + index);
@@ -29,6 +30,7 @@ function App() {
         {selectedOption === 4 && <ControlBox02 />}
         {selectedOption === 5 && <GeoBox01 />}
         {selectedOption === 6 && <GeoText01 />}
+        {selectedOption === 7 && <GeoText02 />}
       </Canvas>
     </div>
   );
