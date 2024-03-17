@@ -8,9 +8,11 @@ import ControlBox02 from "./components/ControlBox02";
 import GeoBox01 from "./components/GeoBox01";
 import GeoText01 from "./components/GeoText01";
 import GeoText02 from "./components/GeoText02";
+import GeoTexture01 from "./components/GeoTexture01";
+import Plane01 from "./components/Plane01";
 
 function App() {
-  const pullDownOptions = Array.from({ length: 10 }, (_, index) => 1 + index);
+  const pullDownOptions = Array.from({ length: 20 }, (_, index) => 1 + index);
   const [selectedOption, setSelectedOption] = useState(pullDownOptions[0]);
 
   return (
@@ -31,6 +33,13 @@ function App() {
         {selectedOption === 5 && <GeoBox01 />}
         {selectedOption === 6 && <GeoText01 />}
         {selectedOption === 7 && <GeoText02 />}
+        {selectedOption === 8 && (
+          <>
+            <GeoTexture01 />
+            <Plane01 />
+          </>
+        )}
+        {selectedOption === 9 && <Plane01 />}
       </Canvas>
     </div>
   );
