@@ -10,6 +10,7 @@ import GeoText01 from "./components/GeoText01";
 import GeoText02 from "./components/GeoText02";
 import GeoTexture01 from "./components/GeoTexture01";
 import Plane01 from "./components/Plane01";
+import GeoTexture02 from "./components/GeoTexture02";
 
 function App() {
   const pullDownOptions = Array.from({ length: 20 }, (_, index) => 1 + index);
@@ -39,7 +40,12 @@ function App() {
             <Plane01 />
           </>
         )}
-        {selectedOption === 9 && <Plane01 />}
+        {selectedOption === 9 && (
+          <>
+            <GeoTexture02 />
+            <Plane01 />
+          </>
+        )}
       </Canvas>
     </div>
   );
